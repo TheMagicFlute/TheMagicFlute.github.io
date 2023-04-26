@@ -1,2 +1,2 @@
 # TheMagicFlute.github.io
-TheMagicFlute's github page
+hello from TheMagicFlute!
