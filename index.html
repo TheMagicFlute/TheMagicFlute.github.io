@@ -6,6 +6,12 @@
 	<title>TheMagicFlute's garden</title>
 	<link rel="shortcut icon" href="./assets/img/Wolfgang-Amadeus-Mozart.svg" type="image/svg+xml">
 	<link rel="stylesheet" href="./css/button-style.css">
+	<script>
+		function show_current_time() {
+			document.getElementById("current-time").innerHTML = "current time is " + Date();
+		};
+		setInterval("show_current_time()",1000);
+	</script>
 	<!-- <style>
             body{
                 background-image: url("./assets/img/BG.jpg");
@@ -18,14 +24,13 @@
 		"use strict";
 		// window.location.href = "https://github.com/TheMagicFlute/";
 		alert("Hello from TheMagicFlute!");
-		var r = confirm("notice: ColorPictureRandomizer is NOT AVAILABLE.\nI give you face!!!\n\nARE YOU SURE TO CONTINUE???");
-		if (r == true) {
+		var result0 = confirm("notice: ColorPictureRandomizer is NOT AVAILABLE.\nI give you face!!!\n\nARE YOU SURE TO CONTINUE???");
+		if (result0 == true) {
 			alert("Have fun!");
 		} else {
 			alert("Fuck You!");
 			window.location.href = "https://github.com/TheMagicFlute/";
 		}
-		
 	</script>
 
 	<div class="components">
@@ -135,6 +140,8 @@
 
 	<p>This site has been visited<img src="https://count.getloli.com/get/@TheMagicFlute.github.io?theme=rule34"
 			alt="rule34-counter"> times</p>
+
+	<div id="current-time"></div>
 
 	<h2>links</h2>
 
