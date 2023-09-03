@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html id="容器">
+
+    <head>
+        <meta charset="utf-8">
+        <title>BMI Calc</title>
+        <meta name="author" content="TheMagicFlute">
+        <meta name="description" content="a BMI Calc">
+        <meta name="keywords" content="TheMagicflute, BMI Calc, BMI">
+        <link rel="shortcut icon" href="../assets/img/Wolfgang-Amadeus-Mozart.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="../css/style.css">
+        <style>
+            html {
+                text-align: center;
+                background: #d0b164;
+                color: #412300;
+                transition: 1s ease;
+                font-family: sans-serif;
+                word-break: break-all;
+            }
+
+            html[BMI=""] {
+                background: #b3d0d0;
+                color: #002b41;
+            }
+
+            head {
+                display: block;
+                text-align: center;
+                padding: 3em 0 2em;
+            }
+
+            body {
+                margin: 0;
+                padding: 0 0 100px;
+            }
+
+            input {
+                outline: 0;
+                font-size: 20px;
+                line-height: 26px;
+                text-align: center;
+
+                padding: 8px 12px;
+                border: 0;
+                width: 80%;
+                max-width: 300px;
+                -webkit-appearance: none;
+            }
+
+            footer {
+                padding: 80px 0;
+                font-size: .8em;
+                font-family: "Comic Sans MS", script;
+                text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+            }
+
+            footer p {
+                opacity: 0.5;
+                padding: 20px 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script>
+            let bmi;
+            weight.oninput = _ => {
+                const weight = +weight.value.trim().match(/^-?[\de\.]+$/) || '';
+            }
+            height.oninput = _ => {
+                const height = +height.value.trim().match(/^-?[\de\.]+$/) || '';
+            }
+            if (weight !== "" && height !== 0 && weight !== "" && height !== 0) {
+                bmi = "Your BMI is ${weight / (height * height)}";
+            }
+            else {
+                bmi = "error";
+            }
+            BMI.innerHTML = bmi;
+            容器.setAttribute('BMI', BMI);
+        </script>
+
+        <h1>BMI Calc</h1>
+        <p>your weight(kg): <input id="weight" placeholder="input your weight here."></p>
+        <br><br>
+        <p>your height(m): <input id="height" placeholder="input your height here."></p>
+        <br><br>
+        <div id="BMI">Your BMI is </div>
+
+        <!-- <div class="text-bg-left-align" style="padding-top: 10px; font-size: 12px; font-weight: bold;"> Your Body Data are never stored. Even if they were, we have no idea who you are!</div> -->
+        <footer>
+            <p>Your Body Data are never stored. Even if they were, we have no idea who you are!</p>
+        </footer>
+        <div id="footer">
+            Copyright (c) 2023 TheMagicFlute | Source Code: <a
+                href="https://github.com/TheMagicFlute/TheMagicFlute.github.io" target="_blank"> <img alt="Github"
+                    src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white" />
+            </a>
+        </div>
+    </body>
+
+</html>
