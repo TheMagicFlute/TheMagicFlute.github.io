@@ -5,8 +5,9 @@
 	<meta charset="utf-8">
 	<title>TheMagicFlute's garden</title>
 	<link rel="shortcut icon" href="./assets/img/Wolfgang-Amadeus-Mozart.svg" type="image/svg+xml">
-	<link rel="stylesheet" href="./css/button-style.css">
+	<!-- <link rel="stylesheet" href="./css/button-style.css"> -->
 	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/normalize.css">
 	<script>
 		function show_current_time() {
 			document.getElementById("current-time").innerHTML = Date();
@@ -18,193 +19,99 @@
 <body>
 	<script src="./js/init.js"></script>
 
-	<div class="components">
-		<!-- 组件所有元素 -->
-		<div class="main-button">
-			<!-- 按钮主体(圆) -->
-			<div class="moon"></div>
-			<div class="moon"></div>
-			<div class="moon"></div>
-			<!-- 月亮上的陨石坑 -->
-		</div>
-		<div class="daytime-backgrond"></div>
-		<div class="daytime-backgrond"></div>
-		<div class="daytime-backgrond"></div>
-		<!-- 按钮底层的三个虚影 -->
-		<div class="cloud">
-			<!-- 所有的云 -->
-			<div class="cloud-son"></div>
-			<div class="cloud-son"></div>
-			<div class="cloud-son"></div>
-			<div class="cloud-son"></div>
-			<div class="cloud-son"></div>
-			<div class="cloud-son"></div>
-		</div>
-		<div class="cloud-light cloud-float">
-			<!-- 云的虚影 -->
-			<div class="cloud-son"></div>
-			<div class="cloud-son"></div>
-			<div class="cloud-son"></div>
-			<div class="cloud-son"></div>
-			<div class="cloud-son"></div>
-			<div class="cloud-son"></div>
-		</div>
-		<div class="stars">
-			<!-- 所有星星，每一个星星由四个div拼合而成 -->
-			<div class="star big">
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-			</div>
-			<div class="star big">
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-			</div>
-			<div class="star medium">
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-			</div>
-			<div class="star medium">
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-			</div>
-			<div class="star medium">
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-			</div>
-			<div class="star small">
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-			</div>
-			<div class="star small">
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-			</div>
-			<div class="star small">
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-			</div>
-			<div class="star small">
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-			</div>
-			<div class="star small">
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-			</div>
-			<div class="star small">
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-				<div class="star-son"></div>
-			</div>
-		</div>
-	</div>
+	<!-- <iframe src="./button.html"></iframe> -->
+
 	<div id="left" class="text-bg">
 
 		<h1 id="Hello-from-TheMagicFlute!-">Hello from TheMagicFlute! <a href="https://996.icu"><img
 					src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu" /></a></h1>
 		<div class="text-bg-left-align">
-			<p>This site has been visited<img src="https://count.getloli.com/get/@TheMagicFlute.github.io?theme=rule34"
-					alt="rule34-counter"> times</p>
+			<p><img src="https://count.getloli.com/get/@TheMagicFlute.github.io?theme=rule34" alt="rule34-counter"></p>
 
-			<br />
 			<br />
 
 			<div>current time is</div>
 			<div id="current-time"></div>
 
 			<br />
-			<br />
-			
-			<h2 id="announcements-">Announcements</h2>
+
+			<h2 id="Announcements-">Announcements</h2>
 			<p>
-				听说你们妄图我放wjy的照片？没门！
+				<span style="color: red;">2023/12/30</span>: 网站已修复，
 				<br />
-				二次元图片已修复，后续会开放评论区，BMI计算器以及新的前端。
+				二次元图片已修复。后续会开放评论区，BMI计算器以及开发新的前端UI。
+				<br />
+				新增数字随机器，修改背景音乐
+
+				<br />
+				<br />
+
+				<span style="color: red; font-size: larger;">李言 & 陈周吟 有情人终成眷属</span>
 			</p>
 
-			<br />
-			<br />
-
-			<h2 id="links-">links</h2>
-
-			<ul>
-
-				<li>Find me on <a href="https://github.com/TheMagicFlute" target="_blank"><img alt="Github"
-							src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white" /></a>
-				</li>
-
-				<li><a href="http://space.bilibili.com/1527018075/">Find me on BiliBili</a></li>
-
-				<li><a href="https://TheMagicFlute-studio.github.io/">My studio's GitHub Pages</a></li>
-
-				<li><a href="https://FriendlyXuKun.github.io/">FriendlyXuKun's Pages</a></li>
-
-				<li><a href="https://github.com/TheMagicFlute/online-storage/releases/">My online storage</a></li>
-
-				<li><a href="https://discord.gg/2nPdKRg5S7">Discord Server here</a></li>
-
-				<li><a href="https://twitter.com/HuoXi_tmf/">My twitter here</a></li>
-
-			</ul>
-
-			<br />
 			<br />
 
 			<h2 id="tools-">tools</h2>
 
 			<ul>
 
-				<li>
-					<a href="./tools/color-picture.html"><!--<del>-->random a color picture<!--</del>(Not Available!)--></a>
+				<li><a href="./tools/2D-picture.html"><!--<del>-->random 2D pictures<!--</del>(Not Available!)--></a>
 				</li>
 
-				<li><a href="./tools/password-strength.html">test your password's strength</a></li>
+				<li><a href="./tools/password-strength.html">test the strength of your password</a></li>
 
-				<li><a href="./tools/MV-player.html">MV Player</a></li>
+				<li><a href="./tools/music-player.html">Music Player</a></li>
 
 				<li><a href="./tools/blogs.html">My Blogs</a></li>
 
+				<li><a href="./tools/random-number-generator.html">random number generator</a></li>
+
 			</ul>
+
+			<h2 id="links-">links</h2>
+
+			<ul>
+
+				<li><a href="https://github.com/TheMagicFlute" target="_blank">GitHub</a></li>
+
+				<li><a href="http://space.bilibili.com/1527018075/">BiliBili</a></li>
+
+				<li><a href="https://github.com/TheMagicFlute/online-storage/releases/">Online Storage</a></li>
+
+				<li><a href="https://discord.gg/2nPdKRg5S7">Discord Server</a></li>
+
+				<li><a href="https://twitter.com/HuoXi_tmf/">Twitter</a></li>
+
+			</ul>
+
+			<h2 id="Friendly-link-">Friendly-link</h2>
+
+			<ul>
+				<li><a href="https://TheMagicFlute-studio.github.io/">TMF studio's GitHub Pages</a></li>
+
+				<li><a href="https://FriendlyXuKun.github.io/">FriendlyXuKun's Pages</a></li>
+			</ul>
+
 		</div>
 	</div>
+
 	<div class="bgm">
 		<h3>Background Music</h3>
-		<p>轨迹 - Jay Chou</p>
+		<h4>Can You Feel It - Jean Roch</h4>
 		<audio controls="controls" autoplay="autoplay" loop="loop">
-			<source src="./assets/audio/轨迹.ogg" type="audio/ogg">
+			<source src="./assets/audio/Can-You-Feel-It.ogg" type="audio/ogg">
 			<!-- <source src="./assets/audio/最伟大的作品.flac"> -->
 		</audio>
-	</div>
+		</d>
 
-	<div id="footer">
-		Copyright (c) 2023 TheMagicFlute | Source Code: <a
-			href="https://github.com/TheMagicFlute/TheMagicFlute.github.io" target="_blank"> <img alt="Github"
-				src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white" />
-		</a>
-	</div>
+		<div id="footer">
+			Copyright (c) 2023 TheMagicFlute | Source Code: <a
+				href="https://github.com/TheMagicFlute/TheMagicFlute.github.io" target="_blank"> <img alt="Github"
+					src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=Github&logoColor=white" />
+			</a>
+		</div>
 
-	<script src="./js/button-script.js"></script>
+
 </body>
 <!--
                　  　▃▆█▇▄▖
@@ -218,6 +125,6 @@
         ◥██◣　　　　◢▄◤
          　　▀██▅▇▀
         ♂ 114514 | Powered by TheMagicFlute-stinky-core-1.0.0-alpha
-    -->
+-->
 
 </html>
