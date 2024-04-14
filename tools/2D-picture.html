@@ -149,12 +149,18 @@
         }
 
         // document.cookie = "time=10";
+
+        var timeCheck = document.cookie.replace(
+            /(?:(?:^|.*;\s*)time\s*\=\s*([^;]*).*$)|^.*$/,
+            "$1",
+        );
+        
         var time = parseInt(document.cookie.replace(
             /(?:(?:^|.*;\s*)time\s*\=\s*([^;]*).*$)|^.*$/,
             "$1",
         ));
 
-        if (time <= 1 || time == NaN) {
+        if (time <= 1 || timeCheck == "NaN") {
             var pwd = prompt("請輸入訪問密碼");
             console.log(GetPWD(pwd));
             if (GetPWD(pwd) == "2f2a96f5c374a4d6355686cbd529a4aebfae52226b3fb6f1fa690c7372fd4afc") {
