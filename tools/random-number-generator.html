@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="zh/TW">
 
 <head>
-    <title>Generate random num</title>
+    <title>隨機數字生成器</title>
     <link rel="icon" href="../assets/img/Wolfgang-Amadeus-Mozart.svg">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/normalize.css">
@@ -20,19 +20,23 @@
         style="margin: auto; width: 50%; border: 3px solid aqua; padding: 10px; text-align: center; align-items: center;">
         <!-- <div id="result" style="font-size: xx-large; color: red;"> </div> -->
         <br />
-        <strong style="color: red;">VALUES MUST BE INTEGERS</strong>
+        <h1>隨機數字生成器</h1>
+        <br />
+        <h2><strong style="color: red;">數值須為整數</strong></h2>
         <br />
         <form action="javascript:show()">
             <input name="minNum" type="number" placeholder="min value here" value="1" required>
             <br />
-            <input name="maxNum" type="number" placeholder="max value here" value="20" required>
+            <input name="maxNum" type="number" placeholder="max value here" value="47" required>
             <br />
-            <p style="color: white;">the number of random numbers here (at most 50 numbers):</p>
-            <input name="num" type="number" value="1" min="1" max="50" required>
+            <p style="color: white;">隨機
+                <input name="num" type="number" value="1" min="1" max="50" required>
+                個數字
+            </p>
+            去重: <input type="checkbox" name="deduplication" value="1">
             <br />
-            Deduplication: <input type="checkbox" name="deduplication" value="1">
             <br />
-            <input type="submit" value="Generate">
+            <input type="submit" value="生成">
         </form>
         <!-- <a href="?state=1">Generate</a> -->
     </div>
@@ -47,8 +51,7 @@
             var deduplication = document.forms[0].elements["deduplication"].checked;
 
             var arr = [];
-            if (deduplication && (max - min + 1) < time)
-            {
+            if (deduplication && (max - min + 1) < time) {
                 alert("Deduplication is on, but the number of random numbers is too large!");
                 console.warn("Deduplication is on, but the number of random numbers is too large!");
                 return;
@@ -63,10 +66,8 @@
             }
 
             // document.getElementById("result").innerHTML = num.toString();
+            console.log("min=%d\nmax=%d\nresult=[%s]\nDeduplication=", min, max, arr.toString(), deduplication);
             alert("result: " + arr.toString());
-            console.log("min: %d\nmax: %d\nresult: %s\nDeduplication: ", min, max, arr.toString(), deduplication);
-
-
         }
     </script>
 </body>

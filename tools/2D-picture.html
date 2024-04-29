@@ -130,7 +130,7 @@
         .text-bg {
             background-color: rgba(255, 255, 255, 0.220);
             padding: 24px;
-            margin-left: 90%;
+            margin-left: 80%;
             margin-top: 50%;
         }
 
@@ -142,7 +142,9 @@
 
 <body>
     <script src="../js/getSHA256.js"></script>
-    <script>
+    <!--<script>
+        var curURL = getComputedStyle(document.getElementById(overlay), "style").backgroundImage;
+
         function GetPWD(s) {
             var salt = "1a2b3c4d5e6f7g8h9i0j";
             return sha256(pwd + salt).toString();
@@ -164,7 +166,7 @@
             var pwd = prompt("請輸入訪問密碼");
             console.log(GetPWD(pwd));
             if (GetPWD(pwd) == "2f2a96f5c374a4d6355686cbd529a4aebfae52226b3fb6f1fa690c7372fd4afc") {
-                res = "10"
+                res = "5"
                 alert("歡迎妳！")
             } else {
                 alert("密碼錯誤 爲您重定向至胡謙網");
@@ -177,16 +179,17 @@
         document.cookie = "time=" + res;
 
 
-    </script>
-    <div id="overlay" class="overlay">
+    </script>-->
+    <!-- <div id="overlay" class="overlay">
         <div class="text-bg">
             <div class="overlay-body">
                 <a href="">
                     <p class="overlay-title">重新載入</p>
                 </a>
+                <a href="download(curURL);">下載當前圖片</a>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- <p>兄dei, 你在等什么？</p> -->
 </body>
 
