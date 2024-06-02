@@ -3,11 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>二次元图片随机</title>
+    <title>二次元圖片隨機</title>
     <link rel="shortcut icon" href="../assets/img/Wolfgang-Amadeus-Mozart.svg" type="image/svg+xml">
     <meta name="author" content="TheMagicFlute">
     <meta name="description" content="2D picture randomizer">
     <meta name="keywords" content="TheMagicFlute, 2D, 2D picture randomizer">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/init.js"></script>
     <style type="text/css">
         p {
             margin: 0;
@@ -85,7 +87,7 @@
             color: #7fa9d3;
         }
 
-        /* a.overlay-link {
+        a.overlay-link {
             display: inline-block;
             text-decoration: none;
             font-size: 16px;
@@ -104,7 +106,7 @@
             bottom: -4px;
             left: -4px;
             background-color: rgba(132, 94, 194, 0.1);
-        } */
+        }
 
         .overlay-body {
             max-width: 512px;
@@ -121,7 +123,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: url(https://www.loliapi.com/acg/);
+            background-image: url("https://www.loliapi.com/acg/");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center 0;
@@ -141,12 +143,33 @@
 </head>
 
 <body>
-    <script src="../js/getSHA256.js"></script>
-    <!--<script>
-        var curURL = getComputedStyle(document.getElementById(overlay), "style").backgroundImage;
+    <div id="mainOverlay" class="overlay">
+        <div class="text-bg">
+            <div class="overlay-body">
+                <a href="">
+                    <p class="overlay-title">重新載入</p>
+                </a>
+                <!-- <a href="js:download(https://www.loliapi.com/acg/index.html);">下載當前圖片</a> -->
+            </div>
+        </div>
+    </div>
+    <!-- <script src="../js/getSHA256.js"></script> -->
+    <!-- <script src="../js/download.min.js"></script> -->
+    <script>
+        // var element1 = document.getElementById("mainOverlay");
+        // var style1 = window.getComputedStyle(element1);
+        // var curURL = style1.getPropertyValue("background-image").slice(5, -2);
+        // console.log(curURL);
+
+        // function dl(url) {
+        //     console.log(url);
+        //     download(url);
+        // }
+
+        /*
 
         function GetPWD(s) {
-            var salt = "1a2b3c4d5e6f7g8h9i0j";
+            var salt = "1kk3jb219xm21cu8989s";
             return sha256(pwd + salt).toString();
         }
 
@@ -156,7 +179,7 @@
             /(?:(?:^|.*;\s*)time\s*\=\s*([^;]*).*$)|^.*$/,
             "$1",
         );
-        
+
         var time = parseInt(document.cookie.replace(
             /(?:(?:^|.*;\s*)time\s*\=\s*([^;]*).*$)|^.*$/,
             "$1",
@@ -165,7 +188,7 @@
         if (time <= 1 || timeCheck == "NaN") {
             var pwd = prompt("請輸入訪問密碼");
             console.log(GetPWD(pwd));
-            if (GetPWD(pwd) == "2f2a96f5c374a4d6355686cbd529a4aebfae52226b3fb6f1fa690c7372fd4afc") {
+            if (GetPWD(pwd) == "69f09083b1ae43cfa2882917d1565b1cc723cedb7637f9d8a93bc1545eb3aa08") {
                 res = "5"
                 alert("歡迎妳！")
             } else {
@@ -178,18 +201,8 @@
 
         document.cookie = "time=" + res;
 
-
-    </script>-->
-    <!-- <div id="overlay" class="overlay">
-        <div class="text-bg">
-            <div class="overlay-body">
-                <a href="">
-                    <p class="overlay-title">重新載入</p>
-                </a>
-                <a href="download(curURL);">下載當前圖片</a>
-            </div>
-        </div>
-    </div> -->
+        */
+    </script>
     <!-- <p>兄dei, 你在等什么？</p> -->
 </body>
 

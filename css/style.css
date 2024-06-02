@@ -1,3 +1,4 @@
+/* init */
 body {
     padding: 0;
     margin: 0 auto;
@@ -27,8 +28,13 @@ body {
     width: 40%;
 }
 
-.bgm {
+.left-bar {
     position: fixed;
+    bottom: 40px;
+}
+.right-bar {
+    position: fixed;
+    margin-left: 70%;
     bottom: 40px;
 }
 
@@ -75,6 +81,10 @@ a:active {
 
 a:hover {
     color: #7fa9d3;
+}
+
+ul {
+    list-style-type: none;
 }
 
 /* h2 {
@@ -132,4 +142,39 @@ p {
     font-size: 35px;
     margin: 10px;
     margin-left: 20px;
+}
+/* heimu */
+
+.heimu,.heimu rt {
+    background-color: #252525
+}
+
+.heimu,.heimu a,a .heimu,a.new .heimu,span.heimu a.new,span.heimu a.external,span.heimu a.external:visited,span.heimu a.extiw,span.heimu a.extiw:visited,span.heimu a.mw-disambig,span.heimu a.mw-redirect {
+    transition: color 0.13s linear;
+    color: #252525;
+    text-shadow: none
+}
+
+span.heimu:hover,span.heimu:active {
+    color: white
+}
+
+span.heimu:hover a,a:hover span.heimu {
+    color: lightblue
+}
+
+span.heimu:hover a:visited,a:visited:hover span.heimu {
+    color: #C5CAE9
+}
+
+span.heimu:hover a.new,a.new:hover span.heimu {
+    color: #FCC
+}
+
+span.heimu a.new:hover:visited,a.new:hover:visited span.heimu {
+    color: #EF9A9A
+}
+
+span.heimu:hover a.extiw:visited,a.extiw:visited:hover span.heimu {
+    color: #D1C4E9
 }
