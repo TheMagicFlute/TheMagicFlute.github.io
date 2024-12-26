@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <title>二次元圖片隨機</title>
-    <link rel="shortcut icon" href="../assets/img/Wolfgang-Amadeus-Mozart.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/assets/img/Wolfgang-Amadeus-Mozart.svg" type="image/svg+xml">
     <meta name="author" content="TheMagicFlute">
     <meta name="description" content="2D picture randomizer">
     <meta name="keywords" content="TheMagicFlute, 2D, 2D picture randomizer">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/init.js"></script>
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <script src="/js/init.js"></script>
     <style type="text/css">
         p {
             margin: 0;
@@ -132,7 +132,8 @@
         .text-bg {
             background-color: rgba(255, 255, 255, 0.220);
             padding: 24px;
-            margin-left: 80%;
+            position: relative;
+            margin-left: 100%;
             margin-top: 50%;
         }
 
@@ -153,7 +154,7 @@
             </div>
         </div>
     </div>
-    <!-- <script src="../js/getSHA256.js"></script> -->
+    <script src="../js/getSHA256.js"></script>
     <!-- <script src="../js/download.min.js"></script> -->
     <script>
         // var element1 = document.getElementById("mainOverlay");
@@ -166,11 +167,11 @@
         //     download(url);
         // }
 
-        /*
+        
 
-        function GetPWD(s) {
+        function getPWD(s) {
             var salt = "1kk3jb219xm21cu8989s";
-            return sha256(pwd + salt).toString();
+            return sha256(s + salt).toString();
         }
 
         // document.cookie = "time=10";
@@ -187,13 +188,13 @@
 
         if (time <= 1 || timeCheck == "NaN") {
             var pwd = prompt("請輸入訪問密碼");
-            console.log(GetPWD(pwd));
-            if (GetPWD(pwd) == "69f09083b1ae43cfa2882917d1565b1cc723cedb7637f9d8a93bc1545eb3aa08") {
+            console.log(getPWD(pwd));
+            if (getPWD(pwd) == "271cd18a1c4b815a3a27652d7127b16df1fc6546d1a0ecb7b76127e5fb367f35") {
                 res = "5"
                 alert("歡迎妳！")
             } else {
                 alert("密碼錯誤 爲您重定向至胡謙網");
-                window.location.href = "https://friendlyxukun.github.io/";
+                window.location.href = "https://friendlyxukun.github.io";
             }
         } else {
             res = (time - 1).toString();
@@ -201,7 +202,7 @@
 
         document.cookie = "time=" + res;
 
-        */
+        
     </script>
     <!-- <p>兄dei, 你在等什么？</p> -->
 </body>

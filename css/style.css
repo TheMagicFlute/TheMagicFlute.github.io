@@ -1,8 +1,18 @@
 /* init */
+/* normal */
 body {
     padding: 0;
     margin: 0 auto;
     background-color: #424242;
+}
+
+#contributor {
+    color: red;
+}
+
+#contributor-list {
+    font-size:large;
+    color:gold
 }
 
 .text-bg {
@@ -86,15 +96,6 @@ a:hover {
 ul {
     list-style-type: none;
 }
-
-/* h2 {
-    color: #8ec6ff;
-    font-weight: 540;
-    margin: 10px;
-    margin-left: 20px;
-    font-size: 28px;
-    margin-bottom: 20px;
-} */
 
 hr {
     border: none;

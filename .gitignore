@@ -1,2 +1,6 @@
-assets/video
 .vscode
+ignored
+$RECYCLE.BIN
+System Volume Information
+.hintrc
+test.*

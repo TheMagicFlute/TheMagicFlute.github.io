@@ -1,0 +1,184 @@
+/* Christmas Style */
+body {
+    padding: 0;
+    margin: 0 auto;
+    background-color:darkred;
+}
+
+#contributor {
+    color: red;
+}
+
+#contributor-list {
+    font-size:large;
+    color:gold
+}
+
+.Update {
+    color: darkgreen;
+}
+
+.text-bg {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-left: 25%;
+    margin-top: 0%;
+    margin-bottom: 40px;
+    margin-right: 35%;
+    padding: 24px;
+    width: 40%;
+}
+
+.text-bg-left-align {
+    text-align: 25%;
+}
+
+.text {
+    margin-left: 25%;
+    margin-top: 0%;
+    margin-bottom: 40px;
+    margin-right: 35%;
+    padding: 24px;
+    width: 40%;
+}
+
+.left-bar {
+    position: fixed;
+    bottom: 40px;
+}
+.right-bar {
+    position: fixed;
+    margin-left: 70%;
+    bottom: 40px;
+}
+
+#footer {
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #000000;
+    color: #fff;
+    font-family: Arial;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.content {
+    height: 1800px;
+    width: 100%;
+    text-align: center;
+}
+
+#center {
+    text-align: center;
+}
+
+#left {
+    text-align: left;
+}
+
+#right {
+    text-align: right;
+}
+
+a {
+    color: #007020;
+    text-decoration: none;
+}
+
+a:active {
+    color: #00b706;
+}
+
+a:hover {
+    color: #009552;
+}
+
+ul {
+    list-style-type: none;
+}
+
+hr {
+    border: none;
+}
+
+.introduction {
+    background-color: white;
+    width: 100%;
+    height: 130px;
+}
+
+.introduction p {
+    background-color: white;
+    margin-top: -95px;
+    margin-left: 140px;
+}
+
+.introduction p span {
+    background-color: white;
+}
+
+.list li {
+    list-style-type: none;
+    margin: 10px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.logo {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+p {
+    margin: 10px;
+    margin-left: 20px;
+}
+
+.title {
+    color: #0080ff;
+    font-weight: 540;
+    font-size: 35px;
+    margin: 10px;
+    margin-left: 20px;
+}
+/* heimu */
+
+.heimu,.heimu rt {
+    background-color: #252525
+}
+
+.heimu,.heimu a,a .heimu,a.new .heimu,span.heimu a.new,span.heimu a.external,span.heimu a.external:visited,span.heimu a.extiw,span.heimu a.extiw:visited,span.heimu a.mw-disambig,span.heimu a.mw-redirect {
+    transition: color 0.13s linear;
+    color: #252525;
+    text-shadow: none
+}
+
+span.heimu:hover,span.heimu:active {
+    color: white
+}
+
+span.heimu:hover a,a:hover span.heimu {
+    color: lightblue
+}
+
+span.heimu:hover a:visited,a:visited:hover span.heimu {
+    color: #C5CAE9
+}
+
+span.heimu:hover a.new,a.new:hover span.heimu {
+    color: #FCC
+}
+
+span.heimu a.new:hover:visited,a.new:hover:visited span.heimu {
+    color: #EF9A9A
+}
+
+span.heimu:hover a.extiw:visited,a.extiw:visited:hover span.heimu {
+    color: #D1C4E9
+}
