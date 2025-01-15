@@ -8,8 +8,8 @@
     <meta name="description" content="a MV Player">
     <meta name="keywords" content="TheMagicFlute, MV, player, MV Player">
     <link rel="shortcut icon" href="/assets/img/Wolfgang-Amadeus-Mozart.svg" type="image/svg+xml">
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <script src="/js/init.js"></script>
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <style>
         body {
             background-image: url("/assets/img/DT-Glasses.jpg");
@@ -92,35 +92,23 @@
                 <li><a href="?song=Can-You-Feel-It">Can You Feel It (Big Ali Edit) - Jean Roch</a></li>
                 <li><a href="?video=NeverGonnaGiveYouUp">Never Gonna Give You Up - Rick Astley</a></li>
                 <li><a href="?video=GongXiFaCai">恭喜發財 - 劉德華</a></li>
-                <li><a
-                        href="https://cn-gdfs-ct-01-18.bilivideo.com/upgcxcode/76/51/25714105176/25714105176-1-16.mp4?e=ig8euxZM2rNcNbRVhwdVhwdlhWdVhwdVhoNvNC8BqJIzNbfq9rVEuxTEnE8L5F6VnEsSTx0vkX8fqJeYTj_lta53NCM=&uipk=5&nbs=1&deadline=1735226928&gen=playurlv2&os=bcache&oi=2332639681&trid=000018c70173b18e4d9b827193bb7eb82ddah&mid=0&platform=html5&og=cos&upsig=41653cd43b8cf3c91f5b51950a2c989b&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,mid,platform,og&cdnid=60918&bvc=vod&nettype=0&f=h_0_0&bw=38879&logo=80000000">熊出沒
-                        過年</a></li>
+                <li><a href="https://tv.cctv.com/2018/10/01/VIDEH4hHmZMhjlZSZvCRDETT181001.shtml">熊出沒 過年</a></li>
             </ul>
         </ul>
 
 
         <script type="text/javascript">
-            function getQueryVariable(variable) {
-                var query = window.location.search.substring(1);
-                var vars = query.split("&");
-                for (var i = 0; i < vars.length; i++) {
-                    var pair = vars[i].split("=");
-
-                    if (pair[0] == variable) {
-                        return pair[1];
-                    }
-                }
-                return false;
-            }
-
-            if (getQueryVariable("song") != false) {
+            if (getQueryVariable("song") != -1) {
                 window.location.href = "/assets/audio/" + getQueryVariable("song") + ".m4a";
-            } else if (getQueryVariable("songMp3") != false) {
+            } else if (getQueryVariable("songMp3") != -1) {
                 window.location.href = "/assets/audio/" + getQueryVariable("songMp3") + ".mp3";
-            }
-            if (getQueryVariable("video") != false) {
+            } else if (getQueryVariable("video") != -1) {
                 window.location.href = "/assets/video/" + getQueryVariable("video") + ".mp4";
-            }
+            } 
+            // else {
+            //     window.location.href = "/assets/audio/See-You-Again.m4a";
+            // }
+
             /*
             if (getQueryVariable("song") != false && getQueryVariable("album") != false) {
                 window.location.href = "./player.html?song=" + getQueryVariable("song") + "album=" + getQueryVariable("album");

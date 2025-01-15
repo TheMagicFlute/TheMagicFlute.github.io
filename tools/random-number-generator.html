@@ -4,12 +4,13 @@
 
 <head>
     <title>隨機數字生成器</title>
-    <link rel="icon" href="../assets/img/Wolfgang-Amadeus-Mozart.svg">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/normalize.css">
-    <script type="text/javascript" src="../js/random.js"></script>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/init.js"></script>
+    <meta name="author" content="TheMagicFlute">
+    <meta name="description" content="a random number generator">
+    <meta name="keywords" content="random, number, generator, 隨機數字生成器, TheMagicFlute">
+    <link rel="icon" href="/assets/img/Wolfgang-Amadeus-Mozart.svg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <script src="/js/init.js"></script>
 </head>
 
 <body>
@@ -24,18 +25,18 @@
         <br />
         <h1>隨機數字生成器</h1>
         <br />
-        <h2><strong style="color: red;">數值須為整數</strong></h2>
+        <h2><strong style="color: red;">數值須為整型</strong></h2>
         <br />
         <form action="javascript:show()">
             <input name="minNum" type="number" placeholder="min value here" value="1" required>
             <br />
-            <input name="maxNum" type="number" placeholder="max value here" value="47" required>
+            <input name="maxNum" type="number" placeholder="max value here" value="50" required>
             <br />
             <p style="color: white;">隨機
-                <input name="num" type="number" value="1" min="1" max="50" required>
+                <input name="num" type="number" value="1" min="1" max="100" required>
                 個數字
             </p>
-            去重: <input type="checkbox" name="deduplication" value="1">
+            去重: <input type="checkbox" name="deduplication" value="true">
             <br />
             <br />
             <input type="submit" value="生成">
@@ -43,33 +44,119 @@
         <!-- <a href="?state=1">Generate</a> -->
     </div>
 
+
     <script>
+        var min, max, time, deduplication, trick;
+        let flag = getQueryVariable("flag") == "1" || getQueryVariable("flag") == "true";
+        let arr = [];
+        let pass = [33, 45, 41]; // for trick
+        // const pair = new Map(); // for trick
+        function getVars() {
+            if (flag) {
+                min = parseInt(document.forms[0].elements["minNum"].value);
+                max = parseInt(document.forms[0].elements["maxNum"].value);
+                time = parseInt(document.forms[0].elements["num"].value);
+                deduplication = document.forms[0].elements["deduplication"].checked;
+            } else {
+                min = getQueryVariable("min");
+                max = getQueryVariable("max");
+                time = getQueryVariable("time");
+                deduplication = getQueryVariable("deduplication");
+                trick = getQueryVariable("trick");
+
+                if (trick != -1 && (trick == "true" || trick == "1")) {
+                    trick = true;
+                }
+                else {
+                    trick = false;
+                }
+
+                if (deduplication != -1) {
+                    if (deduplication == "true" || deduplication == "1") {
+                        deduplication = true;
+                    }
+                    else if (deduplication == "false" || deduplication == "0") {
+                        deduplication = false;
+                    }
+                    document.forms[0].elements["deduplication"].checked = deduplication;
+                }
+                else {
+                    deduplication = document.forms[0].elements["deduplication"].checked;
+                }
+
+                if (min != -1) {
+                    min = parseInt(min);
+                    document.forms[0].elements["minNum"].value = min;
+                }
+                else {
+                    min = parseInt(document.forms[0].elements["minNum"].value);
+                }
+
+                if (max != -1) {
+                    max = parseInt(max);
+                    document.forms[0].elements["maxNum"].value = max;
+                }
+                else {
+                    max = parseInt(document.forms[0].elements["maxNum"].value);
+                }
+
+                if (time != -1) {
+                    time = parseInt(time);
+                    document.forms[0].elements["num"].value = time;
+                }
+                else {
+                    time = parseInt(document.forms[0].elements["num"].value);
+                }
+            }
+            flag = true;
+        }
+        getVars();
         function show() {
+            getVars();
+            if (min > max) {
+                alert("min value cannot be larger than max value!");
+                console.warn("min value cannot be larger than max value!");
+                return;
+            }
 
-            var min = parseInt(document.forms[0].elements["minNum"].value);
-            var max = parseInt(document.forms[0].elements["maxNum"].value);
-            var time = parseInt(document.forms[0].elements["num"].value);
-
-            var deduplication = document.forms[0].elements["deduplication"].checked;
-
-            var arr = [];
+            // TODO: pairs
             if (deduplication && (max - min + 1) < time) {
                 alert("Deduplication is on, but the number of random numbers is too large!");
                 console.warn("Deduplication is on, but the number of random numbers is too large!");
                 return;
             }
-            for (var i = 0; i < time; i++) {
-                var tmp = randomNum(min, max);
+            for (let i = 0; i < time; i++) {
+                let tmp = randomNum(min, max);
                 if (deduplication && (arr.indexOf(tmp) == -1) || !deduplication) {
-                    arr.push(tmp);
+                    if (trick) {
+                        if (max - min + 1 - time >= pass.length) {
+                            if (pass.indexOf(tmp) != -1) {
+                                i--;
+                            } else {
+                                arr.push(tmp);
+                            }
+                        }
+                        else {
+                            arr.push(tmp);
+                        }
+                    } else {
+                        arr.push(tmp);
+                    }
                 } else {
                     i--;
                 }
             }
+            let originArr = [];
+            for (let i = 0; i < arr.length; i++) {
+                originArr.push(arr[i]);
+            }
+
+            arr.sort(function (a, b) { return a - b });
 
             // document.getElementById("result").innerHTML = num.toString();
-            console.log("min=%d\nmax=%d\nresult=[%s]\nDeduplication=", min, max, arr.toString(), deduplication);
-            alert("result: " + arr.toString());
+            console.log("min=%d\nmax=%d\nDeduplication=%s\nresult=[%s]\nsorted=[%s]", min, max, deduplication, originArr.toString(), arr.toString());
+            alert("result: " + originArr.toString());
+            arr = []; // clear array
         }
     </script>
 </body>

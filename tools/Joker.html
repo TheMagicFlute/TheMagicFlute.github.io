@@ -7,18 +7,29 @@
     <meta name="keywords" content="TheMagicFlute, Joker, Joker Time, 小丑, 小醜, 小丑时刻, 小醜時刻">
     <style>
         body {
-            background-image: url("../assets/img/Joker.jpg");
+            background-image: url("/assets/img/Joker.jpg");
             background-size: 100%;
         }
     </style>
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/init.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/init.js"></script>
+    <script>
+        
+        function func()
+        {
+            // window.location.href = "/assets/audio/See-You-Again.m4a";
+            
+            document.getElementById("source").src = "/assets/audio/See-You-Again.m4a";
+            document.getElementById("audio").load()
+        }
+        setTimeout("func();", 5000);
+    </script>
 </head>
 
 <body>
     <div style="bottom: 40px; position: fixed;">
-        <audio controls="controls" autoplay="autoplay" loop="loop">
-            <source src="../assets/audio/Joker-Time.mp3">
+        <audio controls="controls" autoplay="autoplay" loop="loop" id="audio">
+            <source src="/assets/audio/Joker-Time.mp3" id="source">
         </audio>
     </div>
 </body>
